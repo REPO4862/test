@@ -1,0 +1,29 @@
+/*#pragma warning(disable:4996)*//*Visual studio private*/
+#include <stdio.h>
+#include <Windows.h>
+
+int main()
+{
+    long int a, i, cnt = 0;
+    long int b[90]{ 0 };
+
+    printf("이것은 이진수 변환기 일겁니다 아마도..\n>>>");
+
+    scanf("%d", &a); 
+
+    for (i = 0;a>1; i++) {
+        b[i] = a % 2;
+        a = a / 2;
+        cnt++;
+    }
+    b[i] = a;
+    printf("\n짜잔 ");
+    for (; cnt >= 0; cnt--, i--) {
+        printf("%d", b[i]);
+    }
+    printf("입니다\n\n");
+
+    system("pause");
+
+    return 0;
+}
